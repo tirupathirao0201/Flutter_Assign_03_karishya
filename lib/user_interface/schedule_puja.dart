@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assign3/user_interface/existing_customers.dart';
+import 'package:flutter_assign3/widgets/generic_app_bar.dart';
 
 class SchedulePuja extends StatefulWidget {
   const SchedulePuja({super.key});
@@ -9,40 +10,11 @@ class SchedulePuja extends StatefulWidget {
 }
 
 class _SchedulePujaState extends State<SchedulePuja> {
+  int? selecteTab = 2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF6A234F),
-        leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios)),
-        title: const Text(
-          "Schedule a Puja",
-          style: TextStyle(
-            fontFamily: "Poppins",
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w500,
-            fontSize: 22,
-          ),
-        ),
-        actions: <Widget>[
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.notifications,
-                size: 30,
-              )),
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.search,
-                size: 30,
-              ))
-        ],
-      ),
+      appBar: const MyAppBar(title: 'Schedule a puja'),
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -79,7 +51,6 @@ class _SchedulePujaState extends State<SchedulePuja> {
                     Image.asset("assets/images/avatar.png"),
                     const Text("For New Customer",
                         style: TextStyle(
-                            fontFamily: "Poppins",
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w600,
                             fontSize: 24,
@@ -112,7 +83,6 @@ class _SchedulePujaState extends State<SchedulePuja> {
                       Image.asset("assets/images/avatar.png"),
                       const Text("Existing Customer",
                           style: TextStyle(
-                              fontFamily: "Poppins",
                               fontStyle: FontStyle.normal,
                               fontWeight: FontWeight.w600,
                               fontSize: 24,
@@ -128,7 +98,12 @@ class _SchedulePujaState extends State<SchedulePuja> {
         selectedItemColor: const Color(0xffDF7900),
         selectedLabelStyle: const TextStyle(color: Color(0xffDF7900)),
         unselectedLabelStyle: const TextStyle(color: Colors.black),
-        currentIndex: 2,
+        currentIndex: selecteTab!,
+        onTap: (index) {
+          setState(() {
+            selecteTab = index;
+          });
+        },
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(

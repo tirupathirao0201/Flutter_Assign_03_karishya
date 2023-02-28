@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assign3/user_interface/schedule_puja.dart';
 
-// add this
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -36,7 +35,6 @@ class _HomePageState extends State<HomePage> {
             const Text(
               "Sign In",
               style: TextStyle(
-                fontFamily: "Poppins",
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.w600,
                 fontSize: 32,
@@ -47,7 +45,6 @@ class _HomePageState extends State<HomePage> {
               "Sign in to access all the important puja material and puja sessions.",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: "Poppins",
                 fontWeight: FontWeight.w500,
                 fontSize: 18,
               ),
@@ -87,7 +84,6 @@ class _HomePageState extends State<HomePage> {
                 child: const Text(
                   "SUBMIT",
                   style: TextStyle(
-                      fontFamily: "Poppins",
                       fontStyle: FontStyle.normal,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
@@ -100,7 +96,6 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "Don't have an account?",
                   style: TextStyle(
-                      fontFamily: "Poppins",
                       fontStyle: FontStyle.normal,
                       fontWeight: FontWeight.w400,
                       fontSize: 15),
@@ -108,7 +103,6 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "SIGN UP",
                   style: TextStyle(
-                      fontFamily: "Poppins",
                       fontStyle: FontStyle.normal,
                       fontWeight: FontWeight.w400,
                       fontSize: 15,

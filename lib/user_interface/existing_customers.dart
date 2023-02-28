@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assign3/widgets/generic_customer_details.dart';
+import '../widgets/generic_app_bar.dart';
 
 class ExistingCustomers extends StatefulWidget {
   const ExistingCustomers({super.key});
@@ -13,38 +14,9 @@ class _ExistingCustomersState extends State<ExistingCustomers> {
 
   @override
   Widget build(BuildContext context) {
-    // New comment for optimize branch
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color(0xFF6A234F),
-          leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.arrow_back_ios)),
-          title: const Text(
-            "Existing Customers",
-            style: TextStyle(
-              fontFamily: "Poppins",
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.w500,
-              fontSize: 22,
-            ),
-          ),
-          actions: <Widget>[
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.notifications,
-                  size: 30,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.search,
-                  size: 30,
-                ))
-          ],
+        appBar: const MyAppBar(
+          title: "Existing Customers",
         ),
         body: Container(
           height: double.infinity,

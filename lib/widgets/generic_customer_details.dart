@@ -37,7 +37,6 @@ class GenericCustomerDetails extends StatelessWidget {
                       customerName!,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                          fontFamily: "Poppins",
                           fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
@@ -50,7 +49,7 @@ class GenericCustomerDetails extends StatelessWidget {
                           customerLocation!,
                           textAlign: TextAlign.center,
                           style: const TextStyle(
-                              fontFamily: "Poppins",
+  
                               fontStyle: FontStyle.normal,
                               fontWeight: FontWeight.w400,
                               fontSize: 13,
